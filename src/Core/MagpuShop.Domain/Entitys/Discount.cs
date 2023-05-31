@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MagpulShop.Domain.Entitys
 {
-    public class BasketItems
+    public class Discount
     {
         public int Id { get; set; }
-        public int ProductId { get; set; }
-        public int Quantity { get; set; }
-
+        public string Name { get; set; }
+        public decimal Amount { get; set; }
     }
 }

@@ -8,8 +8,12 @@ namespace Magpul.Persistence.EntityTypeConfigurations
     {
         public void Configure(EntityTypeBuilder<Basket> builder)
         {
+            builder.ToTable("Baskets");
             builder.HasKey(basket => basket.Id);
             builder.HasIndex(basket => basket.Id).IsUnique();
+            builder.HasMany(basket => basket.Products);
+
+
         }        
     }
 }
