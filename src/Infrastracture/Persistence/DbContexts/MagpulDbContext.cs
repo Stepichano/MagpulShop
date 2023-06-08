@@ -26,7 +26,7 @@ namespace Magpul.Persistence.DbContexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MagpulDbContext).Assembly);
         }
     }
 }

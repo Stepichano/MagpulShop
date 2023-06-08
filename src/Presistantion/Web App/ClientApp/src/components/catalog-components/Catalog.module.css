@@ -1,0 +1,40 @@
+.item {
+  width: 250px;
+  background-color: #3a3a3a;
+  border: 5px solid black;
+  border-color: black;
+  color: white;
+  margin: 1px;
+}
+
+.image {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.infoName {
+  margin-left: 50px;
+}
+
+.infoPrice {
+  margin: 10px;
+  background-position: center;
+}
+
+.logButton {
+  width: 150px;
+  height: 50px;
+  margin-left: 15px;
+  background-color: #988044;
+}
+
+.cartItem {
+    cursor: pointer;
+}
+
+.authorizationItem {
+    cursor: pointer;
+}

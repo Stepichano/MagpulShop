@@ -1,3 +1,5 @@
+using Magpul.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,3 +27,9 @@ app.MapControllerRoute(
 app.MapFallbackToFile("index.html");
 
 app.Run();
+
+
+var general = new General();
+
+General.StartUp();
+
