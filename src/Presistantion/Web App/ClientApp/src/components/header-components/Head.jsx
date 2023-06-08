@@ -21,7 +21,7 @@ const useValidation = (value, validations) => {
           break;
       }
     }
-  }, [value]);
+  }, [value, validations]);
 
   return {
     isEmpty,

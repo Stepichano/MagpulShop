@@ -3,13 +3,14 @@ using System.Configuration;
 using MagpulShop.Domain.Entitys;
 using MagpulShop.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.Extensions.Configuration.Json;
 
 namespace Magpul.Persistence.DbContexts
 {
-    public class MagpulDbContext : DbContext, IMagpulDbContext
+    public class MagpulDbContext : DbContext, IMagpulDbContext, IdentityDbContext<User>
     {
         public DbSet<Basket> Basket { get; set; } = null!;
         public DbSet<Discount> Discounts { get; set; } = null!;

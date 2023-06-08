@@ -1,12 +1,13 @@
-﻿namespace MagpulShop.Domain.Entitys
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+namespace MagpulShop.Domain.Entitys
 {
-    public class User
+    public class User : IdentityUser
     {   
         public int Id { get; set; }
-        public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string Login { get; set; }
 
     }
 }
