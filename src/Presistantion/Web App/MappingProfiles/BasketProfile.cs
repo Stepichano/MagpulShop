@@ -4,11 +4,11 @@ using Web_app.Models;
 
 namespace Web_app.MappingProfiles
 {
-    public class UserProfile : Profile
+    public class BasketProfile : Profile
     {
-        public UserProfile()
+        public BasketProfile()
         {
-            CreateMap<User, UserViewModel>().ReverseMap();
+            CreateMap<Basket, BasketVeiwModel>().ReverseMap();
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MagpulShop.Domain.Entitys;
+﻿using MagpulShop.Domain.Entitys;
 using Microsoft.AspNetCore.Identity;
 
 namespace Web_app.Services

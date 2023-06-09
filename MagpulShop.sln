@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presintaition", "Presintait
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagpulShop.Domain", "src\Core\MagpuShop.Domain\MagpulShop.Domain.csproj", "{129A8596-8472-4998-84F6-0F82314ED49D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web app", "src\Presistantion\Web App\Web app.csproj", "{D280BFE4-E136-47FF-A448-81A53F7FE4E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\Presistantion\Web App\WebApp.csproj", "{D280BFE4-E136-47FF-A448-81A53F7FE4E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{248BF6B9-3F5A-4160-A922-E16551E9A776}"
 EndProject

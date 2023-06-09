@@ -1,17 +1,15 @@
-﻿using System.Threading.Tasks;
-using MagpulShop.Domain.Entitys;
-using MagpulShop.Domain.Interfaces;
+﻿using MagpulShop.Domain.Entitys;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace MagpulShop.Services
+namespace Web_app.Services
 {
     public class UserService : IUserService
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
-        
-        
+
+
 
         public UserService(UserManager<User> userManager, SignInManager<User> signInManager)
         {
@@ -47,18 +45,18 @@ namespace MagpulShop.Services
             }
         }
 
-        public async Task<IQueryable<User> GetAll()
+        public async Task<IQueryable> GetAll()
         {
-            var users = await _userManager.Users.TolistAsync();
-            return users.AsQueryble();
+            var users = await _userManager.Users.ToListAsync();
+            return users.AsQueryable();
         }
 
-        private string GenerateJwtToken(string email)
-        {
-            // Generate a JWT token for the given user email (you can use your preferred JWT library)
-            // ...
-            // Return the generated token
-            return "generated_token";
-        }
+    private string GenerateJwtToken(string email)
+    {
+        // Generate a JWT token for the given user email (you can use your preferred JWT library)
+        // ...
+        // Return the generated token
+        return "generated_token";
     }
+}
 }

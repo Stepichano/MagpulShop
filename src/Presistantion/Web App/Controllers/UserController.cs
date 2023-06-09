@@ -1,20 +1,17 @@
 ﻿// UserController.cs
 
-using System.Threading.Tasks;
 using AutoMapper;
 using MagpulShop.Domain.Entitys;
-using MagpulShop.Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Web_app.Models;
 using Web_app.Services;
-using System.Linq;
 
-namespace MagpulShop.Controllers
+namespace Web_app.Controllers
 {
     [ApiController]
     [Route("api/users")]
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;
@@ -25,7 +22,8 @@ namespace MagpulShop.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost("register")]
+        [Route("register")]
+        [HttpPost]
         public async Task<IActionResult> Register(UserViewModel model)
         {   
             var user = _mapper.Map<User>(model);
@@ -42,7 +40,8 @@ namespace MagpulShop.Controllers
             }
         }
 
-        [HttpPost("login")]
+        [Route("login")]
+        [HttpPost]
         public async Task<IActionResult> Login(UserViewModel model)
         {
             // Call the login method of the user service

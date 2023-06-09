@@ -2,11 +2,12 @@
 
 namespace MagpulShop.Domain.Entitys
 {
-    public class ProductCategory
+    public class ProductSubCategory
     {
         [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
-            
+        public ProductCategory ProductCategory { get; set; }
+
     }
 }

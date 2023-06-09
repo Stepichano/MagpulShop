@@ -4,11 +4,11 @@ using Web_app.Models;
 
 namespace Web_app.MappingProfiles
 {
-    public class UserProfile : Profile
+    public class ProductProfile : Profile
     {
-        public UserProfile()
+        public ProductProfile()
         {
-            CreateMap<User, UserViewModel>().ReverseMap();
+            CreateMap<Product, ProductViewModel>().ReverseMap();
         }
     }
 }

@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace EntityTypeConfiguration
 {
-    public class SubProductCategoryConfiguration : IEntityTypeConfiguration<SubProductCategory>
+    public class SubProductCategoryConfiguration : IEntityTypeConfiguration<ProductSubCategory>
     {
-        public void Configure(EntityTypeBuilder<SubProductCategory> builder)
+        public void Configure(EntityTypeBuilder<ProductSubCategory> builder)
         {
             builder.HasKey(subProductCategory => subProductCategory.Id);
             builder.HasIndex(subProductCategory => subProductCategory.Id).IsUnique();
