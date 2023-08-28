@@ -11,7 +11,7 @@ namespace Web_app.Controllers
 {
     [ApiController]
     [Route("api/users")]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
         private readonly IMapper _mapper;

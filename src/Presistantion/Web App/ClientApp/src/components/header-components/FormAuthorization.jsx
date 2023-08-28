@@ -59,6 +59,9 @@ const FormAuthorization = ({ show, handleClose }) => {
    const handleRegisterClick = async() => {
 
       const response = await UserService.registerUser({email : email.value, password: password.value});
+      if(!response) {
+        return <p>ErrorHttp</p>
+      }
       console.log(response.status);
 
   }

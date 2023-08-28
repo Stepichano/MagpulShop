@@ -20,7 +20,9 @@ namespace Web_app
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(_configuraion);
             services.AddControllersWithViews();
+            services.AddControllers();
             services.AddDbContext<MagpulDbContext>(options => options.UseSqlServer(
                 _configuraion.GetConnectionString("DefaultConnection")));
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<MagpulDbContext>();
@@ -33,10 +35,6 @@ namespace Web_app
                 options.AddPolicy("AllowOrigin", builder =>
                 {
                     builder.WithOrigins("https://localhost:44401/")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
-                    builder.WithOrigins("https://localhost:44402/")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials();
@@ -61,6 +59,7 @@ namespace Web_app
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors("AllowOrigin");
 
             app.UseAuthentication();
             app.UseAuthorization();

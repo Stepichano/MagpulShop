@@ -78,6 +78,8 @@ namespace Web_app.Controllers
             return Ok(productsViewModels);
         }
 
+        [Route("by-id-subcategory")]
+        [HttpGet]
         public IActionResult GetByIdSubCategoryActionResult(int id)
         {
             var products = _productService.GetByIdSubCategory(id).Result.AsQueryable();
@@ -87,6 +89,9 @@ namespace Web_app.Controllers
             return Ok(productsViewModels);
         }
 
+
+        [Route("add")]
+        [HttpPost]
         public IActionResult AddProduct(ProductViewModel model)
         {
             var product = _mapper.Map<Product>(model);
